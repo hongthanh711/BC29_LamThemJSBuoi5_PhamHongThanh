@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<title>Làm thêm JS Buổi 5</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	<!-- MATERIAL DESIGN ICONIC FONT -->
+	<link rel="stylesheet" href="fonts/material-design-iconic-font/css/material-design-iconic-font.min.css" />
+
+	<!-- STYLE CSS -->
+	<link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+	<!-- Bài 1 -->
+	<div class="wrapper">
+		<div class="inner">
+			<!-- <form action=""> -->
+			<h3>Bài 1</h3>
+			<p>Tính thuế thu nhập cá nhân</p>
+
+			</label>
+			<label class="form-group">
+				<input id="hoTen" type="text" class="form-control" required />
+				<span for="">Họ tên</span>
+				<span class="border"></span>
+			</label>
+
+			<label class="form-group">
+				<input id="tongThuNhap" type="text" class="form-control" required />
+				<span for="">Tổng thu nhập (Triệu đồng)</span>
+				<span class="border"></span>
+			</label>
+
+			<label class="form-group">
+				<input id="soNguoiPhuThuoc" type="text" class="form-control" required />
+				<span for="">Số người phụ thuộc</span>
+				<span class="border"></span>
+			</label>
+
+			<button id="btn-tinhThue">
+				Tính tiền thuế
+				<i class="zmdi zmdi-arrow-right"></i>
+			</button>
+			<!-- </form> -->
+			<div class="ketQua" id="ketqua-tinhThue"></div>
+		</div>
+	</div>
+
+	<!-- Bài 2 -->
+	<div class="wrapper">
+		<div class="inner">
+			<!-- <form action=""> -->
+			<h3>Bài 2</h3>
+			<p>Tính tiền cáp</p>
+
+			<label class="form-group">
+				<input id="maKH" type="text" class="form-control" required />
+				<span for="">Mã khách hàng</span>
+				<span class="border"></span>
+			</label>
+
+			<label class="form-group">
+				<select name="" id="loaiKhachHang" style="background-color: black; width: 100%;">
+					<option value="">Chọn loại khách hàng</option>
+					<option value="dan">Nhà dân</option>
+					<option value="dn">Doanh nghiệp</option>
+				</select>
+			</label>
+
+			<label class="form-group">
+				<input id="soKetNoi" type="text" class="form-control" required style="display: none;" />
+				<span for="">Số kết nối</span>
+				<span class="border"></span>
+			</label>
+
+			<label class="form-group">
+				<input id="soKenhCaoCap" type="text" class="form-control" required />
+				<span for="">Số kênh cao cấp</span>
+				<span class="border"></span>
+			</label>
+
+			<button id="btn-tinhTien">
+				Tính tiền
+				<i class="zmdi zmdi-arrow-right"></i>
+			</button>
+			<!-- </form> -->
+			<div class="ketQua" id="ketqua-tinhTien"></div>
+		</div>
+	</div>
+
+	<script src="./main.js"></script>
+</body>
+
+</html>
