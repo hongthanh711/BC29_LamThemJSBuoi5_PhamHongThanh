@@ -107,17 +107,35 @@ const PHI_THUE_KENH_DN = 50;
 
 var tienKetNoi = 0;
 var tienThueKenh = 0;
-
-// if (getEle("loaiKhachHang").value === "dn") {
-//   getEle("soKetNoi").style.display = "block";
-// }
+var tongTien = 0;
 
 // Onclick
 getEle("btn-tinhTien").onclick = function () {
   // Dom số liệu
   var loaiKH = getEle("loaiKhachHang").value;
-  var soKetNoi = getEle("soKetNoi");
-  var soKenhCaoCap = getEle("soKenhCaoCap");
+  var soKetNoi = getEle("soKetNoi").value * 1;
+  var soKenhCaoCap = getEle("soKenhCaoCap").value * 1;
 
-  tienThueKenh = soKenhCaoCap * PHI_THUE_KENH_DAN;
+  // Tính toán
+  if (loaiKH === "dan") {
+    tienThueKenh = soKenhCaoCap * PHI_THUE_KENH_DAN;
+    tongTien = PHI_HD_DAN + PHI_DV_DAN + tienThueKenh;
+  } else if (loaiKH === "dn") {
+    tienThueKenh = soKenhCaoCap * PHI_THUE_KENH_DAN;
+    if (soKetNoi < 10) {
+      tienKetNoi = 75;
+    } else {
+      tienKetNoi = 75 + (soKetNoi - 10) * 5;
+    }
+    tongTien = PHI_HD_DAN + tienKetNoi + tienThueKenh;
+  }
+
+  var result = "Tiền cáp là: " + tongTien + " $";
+
+  // Show kq
+  getEle("ketqua-tinhTien").innerHTML = result;
 };
+
+function myFunction() {
+  getEle("div-kn").style.display = "block";
+}

@@ -63,15 +63,16 @@
 			</label>
 
 			<label class="form-group">
-				<select name="" id="loaiKhachHang" style="background-color: black; width: 100%;">
+				<select onchange="myFunction()" name="" id="loaiKhachHang"
+					style="background-color: black; width: 100%;">
 					<option value="">Chọn loại khách hàng</option>
 					<option value="dan">Nhà dân</option>
 					<option value="dn">Doanh nghiệp</option>
 				</select>
 			</label>
 
-			<label class="form-group">
-				<input id="soKetNoi" type="text" class="form-control" required style="display: none;" />
+			<label id="div-kn" class="form-group" style="display: none;">
+				<input id="soKetNoi" type="text" class="form-control" required />
 				<span for="">Số kết nối</span>
 				<span class="border"></span>
 			</label>
